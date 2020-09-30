@@ -53,7 +53,7 @@ func init() {
 		makeRandom()
 	}
 	ensemble = spheres.NewSpheres(quantity, positions, velocities, radii, masses)
-	reader, err := os.Open(filepath.FromSlash("images/sphere.png"))
+	reader, err := os.Open(filepath.FromSlash("sphere.png"))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -178,7 +178,7 @@ func update(screen *ebiten.Image) error {
 }
 
 func main() {
-	if err := ebiten.Run(update, screenWidth, screenHeight, 2, "Spheres Demo"); err != nil {
+	if err := ebiten.Run(update, screenWidth, screenHeight, 1, "Spheres Demo"); err != nil {
 		log.Fatal(err)
 	}
 }
