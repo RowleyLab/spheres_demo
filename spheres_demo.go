@@ -178,7 +178,7 @@ func update(screen *ebiten.Image) error {
 }
 
 func main() {
-	if err := ebiten.Run(update, screenWidth, screenHeight, 1, "Spheres Demo"); err != nil {
+	if err := ebiten.Run(update, screenWidth, screenHeight, 2, "Spheres Demo"); err != nil {
 		log.Fatal(err)
 	}
 }
