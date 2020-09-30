@@ -5,6 +5,7 @@ import (
 	"image"
 	"log"
 	"os"
+	"path/filepath"
 	"spheres"
 	"strconv"
 	"time"
@@ -52,7 +53,7 @@ func init() {
 		makeRandom()
 	}
 	ensemble = spheres.NewSpheres(quantity, positions, velocities, radii, masses)
-	reader, err := os.Open("images/sphere.png")
+	reader, err := os.Open(filepath.FromSlash("images/sphere.png"))
 	if err != nil {
 		log.Fatal(err)
 	}
